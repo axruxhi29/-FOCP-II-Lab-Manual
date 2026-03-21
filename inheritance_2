@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+class Animal{
+    protected:
+    void eat() {
+        cout << "Animal is eating" << endl;
+    }
+};
+class Dog : public Animal {
+    public:
+    void bark(){
+        Animal a;
+        cout<< "Dog is barking" <<endl;
+
+    }
+};
+int main(){
+    Dog d;
+    d.eat(); //bcus eat is protected
+    d.bark();
+    return 0;
+}
