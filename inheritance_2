@@ -11,12 +11,14 @@ class Dog : public Animal {
     void bark(){
         Animal a;
         cout<< "Dog is barking" <<endl;
-
+    }
+    void feed(){
+        eat();
     }
 };
 int main(){
     Dog d;
-    d.eat(); //bcus eat is protected
+    d.feed(); //calling public method that accesses protected eat()
     d.bark();
     return 0;
 }
